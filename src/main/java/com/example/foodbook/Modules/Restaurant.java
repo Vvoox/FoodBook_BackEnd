@@ -20,7 +20,6 @@ public class Restaurant {
     @GeneratedValue
     private long id;
     private String name;
-    private int categories;
     private String priceRating;
     private String photo;
     private String duration;
@@ -30,6 +29,9 @@ public class Restaurant {
 
     @OneToMany
     private List<Menu> menu;
+
+    @OneToMany
+    private List<FoodCategory> categories;
 
 
 

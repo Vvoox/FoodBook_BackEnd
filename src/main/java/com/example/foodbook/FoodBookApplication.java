@@ -31,38 +31,37 @@ public class FoodBookApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-//        Menu menu = Menu.builder()
-//                .name("Koskos")
-//                .calories(500)
-//                .price(80)
-//                .description("Moroccan Food")
-//                .photo("Kosko.jpg")
-//                .build();
-//
-//        Menu menu1 = Menu.builder()
-//                .name("Tajine")
-//                .calories(500)
-//                .price(40)
-//                .description("Moroccan Food")
-//                .photo("Kosko.jpg")
-//                .build();
-//
-//        Location location = Location.builder().latitude(33.5232358).longitude(-7.6431258).build();
-//        List<Location> locationList = Collections.singletonList(location);
-//        List<Menu> menus = Arrays.asList(menu,menu1);
-//        Restaurant restaurant = Restaurant.builder()
-//                .name("Khalil Restaurant")
-//                .categories(5)
-//                .location(locationList)
-//                .menu(menus)
-//                .duration("15 - 30 min")
-//                .priceRating("affordable")
-//                .build();
-//
-//        menuRepository.save(menu);
-//        menuRepository.save(menu1);
-//        locationRepository.save(location);
-//        restaurantRepository.save(restaurant);
-//
+        Menu menu = Menu.builder()
+                .name("Koskos")
+                .calories(500)
+                .price(80)
+                .description("Moroccan Food")
+                .photo("Kosko.jpg")
+                .build();
+
+        Menu menu1 = Menu.builder()
+                .name("Tajine")
+                .calories(500)
+                .price(40)
+                .description("Moroccan Food")
+                .photo("Kosko.jpg")
+                .build();
+
+        Location location = Location.builder().latitude(33.5232358).longitude(-7.6431258).build();
+        List<Location> locationList = Collections.singletonList(location);
+        List<Menu> menus = Arrays.asList(menu,menu1);
+        Restaurant restaurant = Restaurant.builder()
+                .name("Khalil Restaurant")
+                .location(locationList)
+                .menu(menus)
+                .duration("15 - 30 min")
+                .priceRating("affordable")
+                .build();
+
+        menuRepository.save(menu);
+        menuRepository.save(menu1);
+        locationRepository.save(location);
+        restaurantRepository.save(restaurant);
+
     }
 }
