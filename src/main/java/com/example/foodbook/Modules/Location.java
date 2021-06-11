@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.math.BigInteger;
 
 @Entity
 @Data
@@ -18,8 +19,8 @@ public class Location {
 
     @Id @GeneratedValue
     private long id;
-    private BigDecimal latitude;
-    private BigDecimal longitude;
+    private double  latitude;
+    private double  longitude;
 
 
 }
